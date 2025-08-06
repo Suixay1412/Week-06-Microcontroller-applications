@@ -325,6 +325,7 @@ Executing "ninja size-files"...
 - จำนวนไฟล์ source: 4
 - ขนาด binary: 163041 bytes
 - การทำงาน:
+
   <img width="590" height="44" alt="image" src="https://github.com/user-attachments/assets/80630770-6f3b-442b-abf1-34a9457e6c10" />
 
 
@@ -332,6 +333,7 @@ Executing "ninja size-files"...
 - จำนวนไฟล์ source: 6
 - ขนาด binary: 163925 bytes
 - การทำงาน:
+
   <img width="284" height="42" alt="image" src="https://github.com/user-attachments/assets/b36f4a4d-477a-4808-b84e-1513fb4c650f" />
 
 
@@ -339,5 +341,6 @@ Executing "ninja size-files"...
 - จำนวนไฟล์ source: 8
 - ขนาด binary: 164873 bytes
 - การทำงาน: 
+
   <img width="818" height="738" alt="image" src="https://github.com/user-attachments/assets/c83f4655-6d64-41e2-84db-8397446c8049" />
 
