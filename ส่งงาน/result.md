@@ -1,5 +1,6 @@
 ### Lab6_1
 ขนาดของ Binary
+
 <img width="849" height="492" alt="image" src="https://github.com/user-attachments/assets/60b924b0-cd84-44b3-8215-f0e3c14bb87e" />
 
 ### รายละเอียดขนาดตาม component
@@ -278,15 +279,65 @@ Executing "ninja size-files"...
 ### คำถามทบทวน
 1.Docker vs Native Setup: อธิบายข้อดีของการใช้ Docker เปรียบเทียบกับการติดตั้ง ESP-IDF บน host system
 ตอบ
+
 2.Build Process: อธิบายขั้นตอนการ build ของ ESP-IDF ใน Docker container ตั้งแต่ source code จนได้ binary
 ตอบ
+
 3.CMake Files: บทบาทของไฟล์ CMakeLists.txt แต่ละไฟล์คืออะไร และทำงานอย่างไรใน Docker environment?
 ตอบ
+
 4.Git Ignore: ไฟล์ .gitignore มีความสำคัญอย่างไรสำหรับ ESP32 project development?
 ตอบ
+
 5.Container Persistence: ข้อมูลใดบ้างที่จะหายไปเมื่อ restart container และข้อมูลใดที่จะอยู่ต่อ?
 ตอบ
+
 6.Development Workflow: เปรียบเทียบ workflow การพัฒนาระหว่างการใช้ Docker กับการทำงานบน native system
 ตอบ
 
 ### Lab6_2
+
+### คำถามทบทวน
+1.Multiple Source Files: เหตุใดต้องแยก source code เป็นหลายไฟล์?
+ตอบ
+
+2.CMakeLists.txt Management: การเพิ่มไฟล์ source ใหม่ต้องแก้ไขอะไรบ้าง?
+ตอบ
+
+3.Header Files: บทบาทของไฟล์ .h คืออะไร และทำไมต้องมี?
+ตอบ
+
+4.Include Directories: เหตุใด CMakeLists.txt ต้องระบุ INCLUDE_DIRS?
+ตอบ
+
+5.Git Ignore: ไฟล์ .gitignore ช่วยอะไรในการจัดการ ESP32 project?
+ตอบ
+
+6.Task Management: การใช้ FreeRTOS task ในโมดูล LED ช่วยอะไร?
+ตอบ
+
+7.Code Organization: ข้อดีของการแยกโมดูล sensor, display, led เป็นไฟล์แยกคืออะไร?
+ตอบ
+
+## บันทึกผลการทดลอง
+
+**ขั้นตอนที่ 1 (เฉพาะ sensor.c):**
+- จำนวนไฟล์ source: 4
+- ขนาด binary: 163041 bytes
+- การทำงาน:
+  <img width="590" height="44" alt="image" src="https://github.com/user-attachments/assets/80630770-6f3b-442b-abf1-34a9457e6c10" />
+
+
+**ขั้นตอนที่ 2 (เพิ่ม display.c):**
+- จำนวนไฟล์ source: 6
+- ขนาด binary: 163925 bytes
+- การทำงาน:
+  <img width="284" height="42" alt="image" src="https://github.com/user-attachments/assets/b36f4a4d-477a-4808-b84e-1513fb4c650f" />
+
+
+**ขั้นตอนที่ 3 (เพิ่ม led.c):**
+- จำนวนไฟล์ source: 8
+- ขนาด binary: 164873 bytes
+- การทำงาน: 
+  <img width="818" height="738" alt="image" src="https://github.com/user-attachments/assets/c83f4655-6d64-41e2-84db-8397446c8049" />
+
